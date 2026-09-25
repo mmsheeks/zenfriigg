@@ -1,54 +1,46 @@
 import './style.css'
-import heroImg from './assets/hero.png'
-import typescriptLogo from './assets/typescript.svg'
-import viteLogo from './assets/vite.svg'
-import { setupCounter } from './counter.ts'
+import avatar from './assets/avatar.png'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <section id="center">
   <div class="hero">
-    <img src="${heroImg}" class="base" width="170" height="179">
-    <img src="${typescriptLogo}" class="framework" alt="TypeScript logo"/>
-    <img src="${viteLogo}" class="vite" alt="Vite logo" />
+    <img src="${avatar}" class="base" width="170" height="179">
   </div>
   <div>
-    <h1>Get started!</h1>
-    <p>Edit <code>src/main.ts</code> and save to test <code>HMR</code></p>
+    <h1>Hello there!</h1>
+    <p>I hope you're having a good day today.</p>
+    <div id="channels">
+      <h2>My Channels</h2>
+      <ul>
+        <li><a href="https://youtube.com/zenfrii" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#youtube"></use></svg>Youtube</a></li>
+        <li><a href="https://twitch.tv/zenfrii" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#twitch"></use></svg>Twitch</a></li>
+      </ul>
+    </div>
   </div>
-  <button id="counter" type="button" class="counter"></button>
 </section>
-
-<div class="ticks"></div>
 
 <section id="next-steps">
   <div id="docs">
-    <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#documentation-icon"></use></svg>
-    <h2>Documentation</h2>
-    <p>Your questions, answered</p>
+    <h2>Other Projects</h2>
     <ul>
       <li>
-        <a href="https://vite.dev/" target="_blank">
-          <img class="logo" src="${viteLogo}" alt="" />
-          Explore Vite
+        <a href="https://clovercraft.gg/" target="_blank">
+          Clovercraft
         </a>
       </li>
       <li>
-        <a href="https://www.typescriptlang.org" target="_blank">
-          <img class="button-icon" src="${typescriptLogo}" alt="">
-          Learn more
+        <a href="https://martinsheeks.com" target="_blank">
+          Personal Site
         </a>
       </li>
     </ul>
   </div>
   <div id="social">
-    <svg class="icon" role="presentation" aria-hidden="true"><use href="/icons.svg#social-icon"></use></svg>
-    <h2>Connect with us</h2>
-    <p>Join the Vite community</p>
+    <h2>Find Me Online</h2>
     <ul>
-      <li><a href="https://github.com/vitejs/vite" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#github-icon"></use></svg>GitHub</a></li>
-      <li><a href="https://chat.vite.dev/" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#discord-icon"></use></svg>Discord</a></li>
-      <li><a href="https://x.com/vite_js" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#x-icon"></use></svg>X.com</a></li>
-      <li><a href="https://bsky.app/profile/vite.dev" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#bluesky-icon"></use></svg>Bluesky</a></li>
+      <li><a href="https://discord.gg/y5phg7BSuY" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#discord-icon"></use></svg>Discord</a></li>
+      <li><a href="https://bsky.app/profile/zenfrii.gg" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#bluesky-icon"></use></svg>Bluesky</a></li>
+      <li><a href="https://github.com/mmsheeks" target="_blank"><svg class="button-icon" role="presentation" aria-hidden="true"><use href="/icons.svg#github-icon"></use></svg>GitHub</a></li>
     </ul>
   </div>
 </section>
@@ -56,5 +48,3 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <div class="ticks"></div>
 <section id="spacer"></section>
 `
-
-setupCounter(document.querySelector<HTMLButtonElement>('#counter')!)
