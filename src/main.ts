@@ -1,5 +1,5 @@
 import './style.css'
-import avatar from './assets/avatar.png'
+import avatar from '../public/avatar.png'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <section id="center">
